@@ -1,7 +1,3 @@
-from pathlib import Path
-
-# Define the content for the GitHub README.md file
-readme_content = """
 # 🐍 30 Days of Python Challenge
 
 Welcome to the **30 Days of Python Challenge**! This is a structured, hands-on journey to strengthen your Python programming skills day by day.
@@ -50,11 +46,5 @@ Each day includes a topic and a small coding challenge to reinforce what you've 
 ✅ Make sure to submit your daily progress using the form provided in the challenge posts.
 
 Happy Coding! 🚀
-"""
 
-# Save the content to a README.md file
-readme_path = Path("/mnt/data/30_Days_of_Python_Challenge_README.md")
-readme_path.write_text(readme_content.strip())
-
-readme_path
 
