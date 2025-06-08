@@ -1,111 +1,60 @@
-# 🐍 30 Days of Python Challenge – Indian Data Club
+from pathlib import Path
 
-Welcome to the **#30DaysOfPython** Challenge hosted by [Indian Data Club](http://indiandataclub.com)!  
-This challenge is designed to take you from **beginner to confident Pythonista** in just 30 days. Whether you're aiming for Data Analytics, Machine Learning, Web Development, or Automation — Python is your foundation.
+# Define the content for the GitHub README.md file
+readme_content = """
+# 🐍 30 Days of Python Challenge
 
----
+Welcome to the **30 Days of Python Challenge**! This is a structured, hands-on journey to strengthen your Python programming skills day by day.
 
-## 📅 Challenge Timeline
-
-- **Duration**: 30 Days
-- **Start Date**: May 28, 2025
-- **End Date**: June 26, 2025
-- **Level**: Beginner to Intermediate
-- **Goal**: Build Python foundations through daily topics and hands-on practice.
+Each day includes a topic and a small coding challenge to reinforce what you've learned.
 
 ---
 
-## 🧠 What You'll Learn
+## 📅 Challenge Schedule
 
-- Python Syntax & Basics
-- Data Types & Structures (List, Dict, Set, Tuple)
-- Control Flow (if, for, while)
-- Functions and Modules
-- File I/O
-- Object-Oriented Programming
-- Error Handling
-- Intermediate Concepts (Comprehensions, Lambda, Decorators)
-- Practical Projects (Web tools, Automation, DA/ML Foundations)
-
----
-
-## ✅ How to Participate
-
-1. **Register Here**:  
-   [📝 Registration Form](https://forms.office.com/r/KhZcVuFJrA)
-
-2. **Track Your Daily Progress**:  
-   [📤 Submission Form](https://forms.office.com/r/DmQ0Cuapz6)
-
-3. **Share Your Journey**:
-   - Post daily progress on **LinkedIn**, **X (Twitter)**, or **GitHub**
-   - Tag **@IndianDataClub**
-   - Use hashtags: `#30DaysOfPython` `#IDC30DaysChallenge`
-
-4. **Stay Updated**:
-   - Join the [IDC Discord Server](https://discord.gg/6gUG8KfPgx)
-   - Follow mentors for tips and support
-
----
-
-## 🧭 Learning Roadmap
-
-📌 Follow the official [Notion Roadmap](https://www.notion.so/30DaysOfPython-1f9a16c0422f8074bf29eee315a6802a?pvs=21)
-
-| Day | Topic                         | Status | Notes |
-|-----|-------------------------------|--------|-------|
-| 0   | Setup: Git, IDE, GitHub       | ✅/❌  |       |
-| 1   | Introduction to Python        | ✅/❌  |       |
-| 2   | Variables and Data Types      | ✅/❌  |       |
-| 3   | Operators                     | ✅/❌  |       |
-| 4   | Conditional Statements        | ✅/❌  |       |
-| 5   | Loops                         | ✅/❌  |       |
-| ... | ...                           |        |       |
-| 30  | Final Project or Summary      | ✅/❌  |       |
-
-> Update the table daily to track your progress!
+| Day        | Topic                                      | Challenge of the Day                                                                 |
+|------------|--------------------------------------------|---------------------------------------------------------------------------------------|
+| Day 0️⃣1️⃣ | Introduction to Python                     | Write a program that prints "Hello, World!" followed by your name                    |
+| Day 0️⃣2️⃣ | Variables and Data Types                   | Calculate the area of a rectangle using user-input length and width                  |
+| Day 0️⃣3️⃣ | Lists, Tuples, and Dictionaries            | Create an inventory system tracking items and quantities with a dictionary           |
+| Day 0️⃣4️⃣ | Control Structures                         | Check if a user-entered number is prime                                              |
+| Day 0️⃣5️⃣ | Functions                                  | Write a function that computes the sum and average of a list of numbers              |
+| Day 0️⃣6️⃣ | Modules and Packages                       | Generate a random 8-character password                                               |
+| Day 0️⃣7️⃣ | File Handling                              | Count word frequencies in a text file                                                |
+| Day 0️⃣8️⃣ | Object-Oriented Programming (Part 1)       | Create a Car class with attributes and a display method                              |
+| Day 0️⃣9️⃣ | Object-Oriented Programming (Part 2)       | Extend Car into an ElectricCar subclass with battery capacity                        |
+| Day 1️⃣0️⃣ | Exception Handling                         | Read numbers from a file and handle errors gracefully                                |
+| Day 1️⃣1️⃣ | Working with Dates and Times               | Create a program that displays the number of days left in the year                   |
+| Day 1️⃣2️⃣ | Regular Expressions                        | Extract all email addresses from a given string                                      |
+| Day 1️⃣3️⃣ | Data Structures                            | Implement a stack and a queue using lists                                            |
+| Day 1️⃣4️⃣ | Recursion                                  | Write a recursive function to calculate the factorial of a number                    |
+| Day 1️⃣5️⃣ | Comprehensions                             | Use list, dictionary, and set comprehensions to clean and transform data             |
+| Day 1️⃣6️⃣ | Lambda, Map, Filter, Reduce                | Use `map`, `filter`, and `reduce` to process a list of numbers                       |
+| Day 1️⃣7️⃣ | Working with JSON                          | Read a JSON file and display the contents in a formatted manner                      |
+| Day 1️⃣8️⃣ | Python with CSV and Excel                  | Read a CSV file and calculate column-wise averages                                   |
+| Day 1️⃣9️⃣ | Web Scraping with BeautifulSoup            | Scrape the title and price of products from a sample e-commerce site                 |
+| Day 2️⃣0️⃣ | Introduction to APIs                       | Use an API to fetch weather data for a city and display it                           |
+| Day 2️⃣1️⃣ | Virtual Environments & pip                 | Create a virtual environment and install required packages using `pip`               |
+| Day 2️⃣2️⃣ | Unit Testing                               | Write unit tests for a function that processes user input                            |
+| Day 2️⃣3️⃣ | Debugging Techniques                       | Debug a program that calculates student grades with logical errors                   |
+| Day 2️⃣4️⃣ | Logging                                    | Add logging to a file-processing script to track errors                              |
+| Day 2️⃣5️⃣ | Working with Databases (SQLite)            | Create a database to store and retrieve book information                             |
+| Day 2️⃣6️⃣ | Python and Pandas                          | Load a CSV into Pandas and analyze the top 5 records                                 |
+| Day 2️⃣7️⃣ | Data Visualization with Matplotlib         | Create a bar chart showing monthly expenses                                          |
+| Day 2️⃣8️⃣ | Python and NumPy                           | Create a 2D array and perform basic operations like mean and transpose               |
+| Day 2️⃣9️⃣ | Capstone Project Day 1                     | Plan and start building a mini project using learned concepts                        |
+| Day 3️⃣0️⃣ | Capstone Project Day 2                     | Complete and submit the project with documentation                                   |
 
 ---
 
-## 🔥 Keep Your Streak Alive!
+✅ Make sure to submit your daily progress using the form provided in the challenge posts.
 
-- Share your progress daily on social media
-- Submit your post link via the [Daily Submission Form](https://forms.office.com/r/DmQ0Cuapz6)
-- Consistent participants may get featured in the **IDC Hall of Fame**
+Happy Coding! 🚀
+"""
 
----
+# Save the content to a README.md file
+readme_path = Path("/mnt/data/30_Days_of_Python_Challenge_README.md")
+readme_path.write_text(readme_content.strip())
 
-## 💬 Community Support
+readme_path
 
-- **Daily Updates**: [IDC Discord Challenge Channel](https://discord.com/channels/1298526897788944474/1374612960105988208)
-- **Ask Questions**: [Challenge Doubts Channel](https://discord.gg/6gUG8KfPgx)
-- **Weekly Vibe Check**: Every Saturday @ 6 PM  
-  [Join via Google Meet](https://meet.google.com/fgg-ghye-nrg)
-
----
-
-## 🙌 Mentors & Contacts
-
-- **Abhishek**: [LinkedIn](https://www.linkedin.com/in/abhishek7x/) | [Twitter](https://x.com/now7x)
-- **Siddhant**: [LinkedIn](https://www.linkedin.com/in/tnahddisttud/) | [Twitter](https://x.com/tnahddisttud)
-- **Pintu**: [LinkedIn](https://www.linkedin.com/in/pintuprajapati/) | [Twitter](https://x.com/pintzprajapati)
-- **Ashish**: [LinkedIn](https://www.linkedin.com/in/ashishm03/) | [Twitter](https://x.com/tensorfarmer)
-- **Sahib**: [LinkedIn](https://www.linkedin.com/in/sahib-musharraf/) | [Twitter](https://x.com/hey_sahib)
-
----
-
-## 🖼️ Challenge Badge
-
-Show the world you're in!  
-![Let's Do It](attachment:381c461d-8b0a-431d-983d-317f3642e015:lets_do_it.png)
-
----
-
-## ✨ License
-
-This challenge is organized by [Indian Data Club](http://indiandataclub.com). Feel free to fork and modify this repo to track your personal journey.
-
----
-
-### Let’s code. Let’s grow. Let’s rise together.  
-🚀 #30DaysOfPython #IDC30DaysChallenge #Python #IndianDataClub #LearnToCode
